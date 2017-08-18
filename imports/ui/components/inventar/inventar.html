@@ -1,0 +1,21 @@
+<template name="inventar">
+    <ul>
+      <form class = "inventar-add">
+        Nume Obiect:<br><input type="text" name="inventarName" placeholder="nume obiect" required>
+        <br>Buc:<br><input type="number" name="inventarQty" placeholder="cantitatea" required>
+        <br>Locatia:<br><input type="text" name="inventarLocation" placeholder="unde se alfa" required>
+        <br>Data Cumpararii:<br><input type="date" name="dataCumparare" placeholder=required>
+        <br>Garantie:<br><input type="number" name="warranty" placeholder="2" required>
+        <br>Points (1-10):
+        <br>1<input type="range" name="functionalityPoints" min="0" max="10"> 10
+        <br><input type="submit" name="invSubmit" value="Adauga la Inventar">
+      </form>
+
+      <p>List of items:
+      {{#each inventar}}
+      <li>Q: {{inventarQty}} buc. ==>  Nume: {{inventarName}} | Locatia: {{inventarLocation}}</li>
+      {{/each}}
+    </p>
+
+    </ul>
+</template>

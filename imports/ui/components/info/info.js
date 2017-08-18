@@ -26,7 +26,7 @@ Template.info.events({
       } else {
         title.value = '';
         url.value = '';
-      }
-    });
-  },
-});
+      }//else
+    });  //Meteor.call
+  }, // submit
+}); // events

@@ -1,4 +1,19 @@
 <template name="App_home">
-  {{> hello}}
-  {{> info}}
+
+  {{> loginButtons}}
+
+  {{#if currentUser}}
+      <h1>inventar</h1>
+      {{> inventar}}
+  {{/if}}
+
 </template>
+
+
+
+<!-- <h1>clicks check</h1>
+{{> hello}} -->
+<!-- <h1>countdown from 1000</h1>
+{{> helloThousand}} -->
+<!-- <h1>learn meteor</h1>
+{{> info}} -->
