@@ -22,6 +22,16 @@ Meteor.methods({
     });
   }, // inventar.insert
 
+ // 'inventar.search'(inventarName){
+ //   check(inventarName, String);
+ //   console.info("we are in Methods => inventar.search", inventarName);
+ //
+ //   return Inventar.find({
+ //     inventarName: inventarName,
+ //   });
+ //
+ // }, //inventar.search
+
 });//methods
 
 // inventarName: 'biciclete',

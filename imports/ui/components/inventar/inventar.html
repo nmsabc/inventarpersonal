@@ -1,21 +1,60 @@
 <template name="inventar">
-    <ul>
-      <form class = "inventar-add">
-        Nume Obiect:<br><input type="text" name="inventarName" placeholder="nume obiect" required>
-        <br>Buc:<br><input type="number" name="inventarQty" placeholder="cantitatea" required>
-        <br>Locatia:<br><input type="text" name="inventarLocation" placeholder="unde se alfa" required>
-        <br>Data Cumpararii:<br><input type="date" name="dataCumparare" placeholder=required>
-        <br>Garantie:<br><input type="number" name="warranty" placeholder="2" required>
-        <br>Points (1-10):
-        <br>1<input type="range" name="functionalityPoints" min="0" max="10"> 10
-        <br><input type="submit" name="invSubmit" value="Adauga la Inventar">
-      </form>
+  <div id="not-found">
+      <ul>
+        <form class = "inventar-add">
+          Nume Obiect:<br><input type="text" name="inventarName" placeholder="nume obiect" required>
+          <br>Buc:<br><input type="number" name="inventarQty" placeholder="cantitatea" required>
+          <br>Locatia:<br><input type="text" name="inventarLocation" placeholder="unde se alfa" required>
+          <br>Data Cumpararii:<br><input type="date" name="dataCumparare" placeholder=required>
+          <br>Garantie:<br><input type="number" name="warranty" placeholder="2" required>
+          <br>Points (1-10):
+          <br>1<input type="range" name="functionalityPoints" min="0" max="10"> 10
+          <br><input type="submit" name="invSubmit" value="Adauga la Inventar">
+        </form>
 
-      <p>List of items:
-      {{#each inventar}}
-      <li>Q: {{inventarQty}} buc. ==>  Nume: {{inventarName}} | Locatia: {{inventarLocation}}</li>
+          <p>List of items:
+          {{#each inventar}}
+          <li>Q: {{inventarQty}} buc. ==>  Nume: {{inventarName}} | Locatia: {{inventarLocation}}</li>
+          {{/each}}
+        </p>
+      </ul>
+  </div>
+</template>
+
+<!-- <template name="cautaInInventar">
+  <ul>
+    <form class="inventar-cauta">
+      Cauta Element: <input type="text" name="inventarCauta" placeholder="cauta ceva ...">
+    </form>
+    <p> lista de elemente cautate
+      {{#each cautaInInventar}}
+      <li>
+        Q: {{inventarQty}} buc. ==> Nume: {{inventarName}}
+      </li>
       {{/each}}
     </p>
+  </ul>
+</template> -->
 
-    </ul>
+<template name="beforeLogin">
+  <div id="not-found">
+      <p>these are features already implemented:
+        <ul>
+          <li>list all items in your inventory</li>
+          <li>add new items in the list considering:</li>
+          <ul>
+            <li>consider the location</li>
+            <li>waranty</li>
+            <li>state of functionality</li>
+            <li>... and many more</li>
+          </ul>
+        </ul>
+      </p>
+      <p>And this is our work in progress:
+        <li>modify location, status [rented, broken, out of Warraty], etc ==> work in progress</li>
+        <li>share items with friends</li>
+        <li>emailing  info</li>
+      </p>
+      <p>Enjoy!</p>
+    </div>
 </template>
