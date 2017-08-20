@@ -26,7 +26,5 @@ johanbrook:publication-collector  # Test a Meteor publication by collecting its 
 momentjs:moment
 accounts-ui
 accounts-google
-accounts-facebook
 google-config-ui
-facebook-config-ui
 accounts-password
